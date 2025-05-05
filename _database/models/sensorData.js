@@ -1,5 +1,5 @@
 // sensorData.js
-const sequelize = require('../connection.js');
+const {sequelize}= require('../connection.js');
 const { DataTypes } = require('sequelize');
 
 const SensorData = sequelize.define('SensorData', {

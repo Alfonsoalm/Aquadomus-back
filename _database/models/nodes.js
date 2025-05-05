@@ -1,5 +1,5 @@
 // nodes.js
-const sequelize = require('../connection.js'); // Importa la conexión a la BD
+const {sequelize} = require('../connection.js'); // Importa la conexión a la BD
 const { DataTypes } = require('sequelize');
 
 const Nodes = sequelize.define('Nodes', {
