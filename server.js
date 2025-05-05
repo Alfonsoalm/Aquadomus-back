@@ -26,7 +26,7 @@ app.use("/", routes);
     setInterval(cyclicSensorsReading, INTERVAL_TIME);
 
     app.listen(PORT, () => {
-      console.log(`Servidor corriendo en http://localhost:${PORT}`);
+      console.log(`Servidor corriendo en ${process.env.MYSQLHOST}:${PORT}`);
     });
   } catch (error) {
     console.error("Error al iniciar el servidor o conectar a la base de datos:", error);
