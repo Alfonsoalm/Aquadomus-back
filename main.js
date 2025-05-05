@@ -43,7 +43,7 @@ const cyclicSensorsReading = async () => {
         }
       }
     } else {
-      console.warn("No se encontraron nodos para procesar.");
+      console.log("No se encontraron nodos para procesar.");
     }
   } catch (error) {
       console.error("Error en el ciclo de obtención de datos:", error);
