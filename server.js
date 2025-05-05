@@ -12,7 +12,11 @@ const PORT = process.env.PORT || 5000;
 const INTERVAL_TIME = 7000; // Definición de INTERVAL_TIME en el ámbito superior
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: '*',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: '*',
+}));
 
 app.use("/", routes);
 
