@@ -30,13 +30,13 @@ const cyclicSensorsReading = async () => {
                 const formattedData = formatData(sensors, dataFiltered);
                 await insertSensorData(formattedData);
               } else {
-                console.warn(`No se recibieron datos de Home Assistant para la IP: ${ip}`);
+                console.log(`No se recibieron datos de Home Assistant para la IP: ${ip}`);
               }
             } catch (error) {
               console.error(`Error al obtener datos de Home Assistant para la IP ${ip}:`, error);
             }
           } else {
-            console.warn(`No se pudo obtener la configuración del nodo para la IP: ${ip}`);
+            console.log(`No se pudo obtener la configuración del nodo para la IP: ${ip}`);
           }
         } catch (error) {
           console.error(`Error al configurar el nodo para la IP ${ip}:`, error);

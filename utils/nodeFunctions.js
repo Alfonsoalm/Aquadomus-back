@@ -5,7 +5,7 @@ const getNodes = async () => {
   try {
     const nodes = await NodesRepository.get();
     if (!nodes || nodes.length === 0) {
-      console.warn("No hay IPs registradas en la base de datos.");
+      console.log("No hay IPs registradas en la base de datos.");
       return {};
     }
     const nodesData = nodes.reduce((acc, node) => {
@@ -31,7 +31,7 @@ const setNode = async (ip) => {
     } else if (nodes && nodes.length > 1) {
       console.error(`Múltiples IPs repetidas encontradas para: ${ip}`);
     } else {
-      console.warn(`No se encontró información del nodo para la IP: ${ip}`);
+      console.log(`No se encontró información del nodo para la IP: ${ip}`);
     }
     return { dynamicIP, dynamicToken };
   } catch (error) {
