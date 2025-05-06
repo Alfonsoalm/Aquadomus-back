@@ -9,7 +9,7 @@ const sequelize = new Sequelize(
   host: process.env.MYSQLHOST.toString(),
   dialect: 'mysql',
   port: process.env.MYSQLPORT.toString(),
-  logging: false,
+  logging: console.log, // Habilita los logs
 });
 
 const connectDB = async () => {

@@ -8,7 +8,12 @@ class NodesRepository {
     const nodes = await Nodes.findAll({ where: filters });
     return nodes.map((node) => {
       const decryptedNode = node.dataValues;
-      decryptedNode.token = decryptData(decryptedNode.token);
+      try {
+        decryptedNode.token = decryptData(decryptedNode.token);
+      } catch (error) {
+        console.error("Error al desencriptar token:", error, "Nodo ID:", decryptedNode.id);
+        decryptedNode.token = null;
+      }
       return decryptedNode;
     });
   }
