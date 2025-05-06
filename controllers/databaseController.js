@@ -1,4 +1,4 @@
-const sequelize = require("../_database/connection.js"); // Ajusta según dónde tengas la conexión de MySQL
+const {sequelize} = require("../_database/connection.js"); // Ajusta según dónde tengas la conexión de MySQL
 const { handleCheck } = require("../utils/handleCheck.js");
 
 // Obtener tamaño total de la base de datos

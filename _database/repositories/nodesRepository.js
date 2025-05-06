@@ -1,7 +1,7 @@
 // nodesRepository.js
 const { Nodes } = require( '../models/nodes.js');
 const { decryptData } = require("../../utils/cryptoUtils.js");
-const sequelize = require('../connection.js');
+const {sequelize} = require('../connection.js');
 
 class NodesRepository {
   static async get(filters = {}) {
